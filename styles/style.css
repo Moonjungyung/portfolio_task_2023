@@ -1,0 +1,22 @@
+main {background-image: url(../images/bg.jpg);}
+main .introduce {}
+main .introduce .photo {}
+main .introduce h1 {}
+main .introduce .loading {}
+main .introduce p {}
+main .introduce .website {}
+main .introduce .website .content {}
+main .introduce .website .content img {}
+main .introduce .website .content span {}
+main #menu {}
+main #menu span:first-child {}
+main #menu span:nth-child(2) {}
+main #menu span:last-child {}
+main .line {}
+main .line .text1 {}
+main .line .text2 {}
+main .work {}
+main .work .working {}
+main .work .working .text_box {}
+main .work .working .text_box h2 {}
+main .work .working .text_box p {}
