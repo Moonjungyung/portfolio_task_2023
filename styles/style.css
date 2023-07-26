@@ -1,6 +1,9 @@
-main {background-image: url(../images/7598163.jpg);}
+main {
+    background: url(../images/7598163.jpg) center fixed;
+    background-size: cover;
+}
 main .introduce {
-    padding: 100px 0;
+    padding: 200px 0;
     display: flex; flex-flow: column nowrap;
     align-items: center;
 }
@@ -30,21 +33,30 @@ main .introduce .loading {
     background: #fff;
     border-radius: 20px;
     position: relative;
+    margin: 20px 0;
 }
 main .introduce .loading .run {
     display: block;
     background-color: aqua;
-    width: 0%;
+    width: 300px;
+    height: 10px;
+    transition: all 3s linear;
     transform-origin: left top;
-    transition: all 2s;
     transform: scaleX(0);
+    overflow: hidden;
 }
-main .introduce .photo:hover~.loading.run {
-    width: 100%;
+main .introduce .photo:hover~ .loading>.run {
+    transform: scaleX(100%);
 }
-main .introduce p {}
+main .introduce p {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
 main .introduce .website {
     display: flex; flex-flow: row nowrap;
+}
+main .introduce .website .content:nth-child(2) {
+    margin: 0 20px;
 }
 main .introduce .website .content {
     width: calc(33.33% -20px / 3);
@@ -58,18 +70,19 @@ main .introduce .website .content img {
 main .introduce .website .content img:hover+span {
     opacity: 1;
 }
-main .introduce .website .content span {
+main .introduce .website .content .sub {
     position: absolute; bottom: -30px;
     background-color: #000; color: #fff;
     padding: 4px 10px;
-    /* opacity: 0; */
+    opacity: 0;
 }
 main #menu {
     margin: 0 auto;
-    width: 30px;
+    width: 33px;
     height: 25px;
     display: flex; flex-flow: column nowrap;
     justify-content: space-between;
+    
 }
 main #menu span {
     width: 100%;
@@ -80,46 +93,53 @@ main #menu span {
     transform: 0;
     opacity: 1;
 }
-main #menu span:hover>span:first-child {
+main #menu:hover span:first-child {
     transform-origin: left top;
-    transform: rotate();
+    transform: rotate(45deg);
 }
-main #menu span:hover>span:nth-child(2) {
+main #menu:hover span:nth-child(2) {
     opacity: 0;
 }
-main #menu span:hover>span:last-child {
+main #menu:hover span:last-child {
     transform-origin: left bottom;
-    transform: rotate();
+    transform: rotate(-45deg);
 }
 
 main #menu span:first-child {}
 main #menu span:nth-child(2) {}
 main #menu span:last-child {}
-main .line {}
+main .line {
+    overflow: hidden;
+    padding: 100px 0;
+}
 main .line .text1 {
-    width: 100%; height: 200px;
-    background: url(../images/bg3.png);
+    width: 150%; height: 220px;
+    background: url(../images/bg2.png);
+    animation: text 100s linear alternate infinite;
+    transform: rotate(-10deg) translateX(-100px);
 }
 main .line .text2 {
-    width: 100%; height: 200px;
-    background: rgba(0,0,0 0.8) url(../images/bg2.png);
+    width: 150%; height: 200px;
+    background: url(../images/bg3.png);
+    background-color:rgba(0,0,0,0.8);
+    animation: text 100s linear alternate infinite;
+    transform: rotate(10deg) translateX(-300px);
 }
 main .work {
-    width: 1260px;
+    max-width: 1260px;
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
     padding: 100px 0;
 }
 main .work .working {
-    width: 310px; height: 350px;
+    width:calc(25% - 20px /4);
+    height: 350px;
     background: url(../images/bg.jpg);
     background-size: cover;
     border-radius: 30% 30% 0 0;
     position: relative;
-    margin-right: 14px;
-}
-main .work .working:last-child {
-    margin-right: 0px;
+
 }
 main .work .working .text_box {
     width: 100%;
