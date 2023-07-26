@@ -64,7 +64,15 @@ main .introduce .website .content span {
     padding: 4px 10px;
     /* opacity: 0; */
 }
-main #menu {}
+main #menu {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between;
+}
+main #menu span {
+    width: 100%;
+    height: 2px;
+    background: #222;
+}
 main #menu span:first-child {}
 main #menu span:nth-child(2) {}
 main #menu span:last-child {}
