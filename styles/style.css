@@ -138,6 +138,9 @@ main .work .working {
     background-size: cover;
     border-radius: 30% 30% 0 0;
     position: relative;
+    box-shadow: none;
+    background-size: 100%;
+    transition: all 1s;
 
 }
 main .work .working .text_box {
@@ -147,7 +150,10 @@ main .work .working .text_box {
     position: absolute;
     bottom: 0;
     padding: 20px 0;
-    
+}
+main .work .working:hover {
+    background-size: 110%;
+    box-shadow: 10px 0 20px #777;
 }
 main .work .working .text_box h2 {
     font-size: 1.1rem;
