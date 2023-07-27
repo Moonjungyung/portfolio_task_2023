@@ -41,7 +41,7 @@ main .introduce .loading .run {
     width: 300px;
     height: 10px;
     transition: all 3s linear;
-    transform-origin: left top;
+    transform-origin: left;
     transform: scaleX(0);
     overflow: hidden;
 }
@@ -82,29 +82,28 @@ main #menu {
     height: 25px;
     display: flex; flex-flow: column nowrap;
     justify-content: space-between;
-    
 }
-main #menu span {
+main #menu>span {
     width: 100%;
-    height: 4px;
+    height: 5px;
     border-radius: 5px;
     background: #222;
-    transition: all 0.5;
-    transform: 0;
     opacity: 1;
+    transform: rotate(0deg);
+    transition: all 0.4s;
 }
 main #menu:hover span:first-child {
-    transform-origin: left top;
-    transform: rotate(45deg);
+    transform-origin: top;
+    transform: translateY(11px) rotate(45deg);
 }
 main #menu:hover span:nth-child(2) {
     opacity: 0;
 }
 main #menu:hover span:last-child {
-    transform-origin: left bottom;
-    transform: rotate(-45deg);
-}
+    transform-origin: bottom;
+    transform: translateY(-10px) rotate(-45deg);
 
+}
 main #menu span:first-child {}
 main #menu span:nth-child(2) {}
 main #menu span:last-child {}
