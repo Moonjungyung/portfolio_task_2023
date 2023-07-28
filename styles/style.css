@@ -135,12 +135,11 @@ main .work .working {
     width:calc(25% - 20px /4);
     height: 350px;
     background: url(../images/bg.jpg);
-    background-size: cover;
+    background-size: auto 100%;
     border-radius: 30% 30% 0 0;
     position: relative;
     box-shadow: none;
-    background-size: 100%;
-    transition: all 1s;
+    transition: all 0.5s;
 
 }
 main .work .working .text_box {
@@ -152,7 +151,7 @@ main .work .working .text_box {
     padding: 20px 0;
 }
 main .work .working:hover {
-    background-size: 110%;
+    background-size: auto 110%;
     box-shadow: 10px 0 20px #777;
 }
 main .work .working .text_box h2 {
